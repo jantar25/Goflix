@@ -1,5 +1,9 @@
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movieList");
+const ball = document.querySelector(".toggleBall");
+const items = document.querySelector(
+  ".container,.movieListeTitle,.navBarContainer,.sideBar,.SideBarIcon,.toggle"
+);
 
 arrows.forEach((arrow, i) => {
   const itemNumber = movieLists[i].querySelectorAll("img").length;
@@ -17,10 +21,7 @@ arrows.forEach((arrow, i) => {
     }
   });
 });
-const ball = document.querySelector(".toggleBall");
-const items = document.querySelector(
-  ".container,.movieListeTitle,.navBarContainer,.sideBar,.SideBarIcon,.toggle"
-);
+
 ball.addEventListener("click", () => {
   items.forEach((item, i) => {
     item.classList.toggle("active");
