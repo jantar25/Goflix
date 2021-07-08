@@ -22,7 +22,7 @@ body {
 }
 
 .logoContainer {
-  flex: 1;
+  flex: 2;
   font-family: "sen", sans-serif;
   color: rgb(39, 39, 189);
   display: flex;
@@ -32,7 +32,7 @@ body {
   font-size: 30px;
 }
 .menuContainer {
-  flex: 6;
+  flex: 5;
 }
 .menuList {
   display: flex;
@@ -121,7 +121,7 @@ body {
   width: 300px;
 }
 .featuresDescrition {
-  width: 50%;
+  width: 60%;
   color: gray;
   margin: 30px 0;
   font-size: 15px;
@@ -239,4 +239,32 @@ body {
 .toggleBall.active {
   background-color: white;
   transform: translateX(-19px);
+}
+
+@media only screen and (max-width: 940px) {
+  .menuContainer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .featuresTitle {
+    width: 250px;
+  }
+  .featuresDescrition {
+    width: 90%;
+    color: gray;
+    margin: 30px 0;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .featuresTitle {
+    width: 200px;
+  }
+  .featuresDescrition {
+    width: 100%;
+    color: gray;
+    margin: 20px 0;
+    font-size: 15px;
+  }
 }

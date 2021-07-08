@@ -5,8 +5,9 @@ arrows.forEach((arrow, i) => {
   const itemNumber = movieLists[i].querySelectorAll("img").length;
   let clickCounter = 0;
   arrow.addEventListener("click", () => {
+    const ration = Math.floor(window.innerWidth / 270);
     clickCounter++;
-    if (itemNumber - (4 + clickCounter) >= 0) {
+    if (itemNumber - (4 + clickCounter) + (4 - ration) >= 0) {
       movieLists[i].style.transform = `translateX(${
         movieLists[i].computedStyleMap().get("transform")[0].x.value - 290
       }px)`;
@@ -17,13 +18,11 @@ arrows.forEach((arrow, i) => {
   });
 });
 const ball = document.querySelector(".toggleBall");
-console.log(ball);
 const items = document.querySelector(
   ".container,.movieListeTitle,.navBarContainer,.sideBar,.SideBarIcon,.toggle"
 );
-console.log(items);
 ball.addEventListener("click", () => {
-  items.forEach((item) => {
+  items.forEach((item, i) => {
     item.classList.toggle("active");
   });
   ball.classList.toggle("active");
