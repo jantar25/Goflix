@@ -83,6 +83,7 @@ body {
   right: 1px;
   border-radius: 50%;
   cursor: pointer;
+  transition: 1s easy all;
 }
 .sideBar {
   width: 50px;
@@ -106,7 +107,7 @@ body {
 
 .container {
   background-color: #151515;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   color: white;
 }
 .contentContainer {
@@ -114,5 +115,128 @@ body {
 }
 .featuresContent {
   height: 50vh;
-  background-size: cover;
+  padding: 50px;
+}
+.featuresTitle {
+  width: 300px;
+}
+.featuresDescrition {
+  width: 50%;
+  color: gray;
+  margin: 30px 0;
+  font-size: 15px;
+}
+.featuresBtn {
+  color: rgb(241, 241, 248);
+  font-weight: bold;
+  background-color: blue;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+}
+
+.movieListContainer {
+  padding: 0 20px;
+}
+.movieListWrap {
+  position: relative;
+  overflow: hidden;
+}
+.movieList {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movieListItems {
+  margin-right: 20px;
+  position: relative;
+}
+.movieListItems:hover .movieListItemsImg {
+  transform: scale(1.2);
+  margin: 0 20px;
+  opacity: 0.5;
+}
+.movieListItems:hover .movieListItemsTitle,
+.movieListItems:hover .movieListItemsBtn,
+.movieListItems:hover .movieListItemsDescription {
+  opacity: 1;
+}
+.movieListItemsImg {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease-out;
+  border-radius: 20px;
+}
+.movieListItemsTitle {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 10px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.movieListItemsDescription {
+  background-color: #333;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.movieListItemsBtn {
+  padding: 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container.active {
+  background-color: white;
+}
+.movieListeTitle.active {
+  color: black;
+}
+
+.navBarContainer.active {
+  background-color: white;
+  color: black;
+}
+.sideBar.active {
+  background-color: white;
+}
+.SideBarIcon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggleBall.active {
+  background-color: white;
+  transform: translateX(-19px);
 }
