@@ -11,7 +11,7 @@ arrows.forEach((arrow, i) => {
   arrow.addEventListener("click", () => {
     const ration = Math.floor(window.innerWidth / 270);
     clickCounter++;
-    if (itemNumber - (4 + clickCounter) + (4 - ration) >= 0) {
+    if (itemNumber - (4 + clickCounter) + (5 - ration) >= 0) {
       movieLists[i].style.transform = `translateX(${
         movieLists[i].computedStyleMap().get("transform")[0].x.value - 290
       }px)`;
