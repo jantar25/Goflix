@@ -1,7 +1,7 @@
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movieList");
 const ball = document.querySelector(".toggleBall");
-const items = document.querySelector(
+const items = document.querySelectorAll(
   ".container,.movieListeTitle,.navBarContainer,.sideBar,.SideBarIcon,.toggle"
 );
 
@@ -23,7 +23,7 @@ arrows.forEach((arrow, i) => {
 });
 
 ball.addEventListener("click", () => {
-  items.forEach((item, i) => {
+  items.forEach((item) => {
     item.classList.toggle("active");
   });
   ball.classList.toggle("active");
