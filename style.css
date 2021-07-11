@@ -279,3 +279,18 @@ body {
     font-size: 15px;
   }
 }
+/*---FOOTER----*/
+
+.footer {
+  padding: 20px 50px;
+  color: blue;
+  position: relative;
+  background: rgb(38, 38, 39);
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.footer-between {
+  text-align: center;
+}
